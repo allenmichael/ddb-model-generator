@@ -1,0 +1,324 @@
+{
+  "version": "0",
+  "id": "e6fa4612-8dfe-50d0-63fd-3a21504adaf6",
+  "detail-type": "AWSAPICallviaCloudTrail",
+  "source": "aws.dynamodb",
+  "account": "812570870442",
+  "time": "2018-06-04T19:07:32Z",
+  "region": "us-west-2",
+  "resources": [],
+  "detail": {
+      "eventVersion": "1.05",
+      "userIdentity": {
+          "type": "IAMUser",
+          "principalId": "AIDAILE2L4VKD7GQWQ6LS",
+          "arn": "arn:aws:iam::812570870442:user/cli",
+          "accountId": "812570870442",
+          "accessKeyId": "AKIAJX25N2QB73XWDP7Q",
+          "userName": "cli"
+      },
+      "eventTime": "2018-06-04T19:07:32Z",
+      "eventSource": "dynamodb.amazonaws.com",
+      "eventName": "CreateTable",
+      "awsRegion": "us-west-2",
+      "sourceIPAddress": "205.251.233.179",
+      "userAgent": "aws-cli/1.15.10Python/3.6.5Darwin/16.7.0botocore/1.10.10",
+      "requestParameters": {
+          "keySchema": [{
+              "keyType": "HASH",
+              "attributeName": "AMKey"
+          }, {
+              "keyType": "RANGE",
+              "attributeName": "TayKey"
+          }],
+          "tableName": "TestingCodeGenerator",
+          "attributeDefinitions": [{
+              "attributeType": "S",
+              "attributeName": "AMKey"
+          }, {
+              "attributeType": "B",
+              "attributeName": "TayKey"
+          }, {
+              "attributeType": "N",
+              "attributeName": "AMGlobalKey"
+          }, {
+              "attributeType": "B",
+              "attributeName": "TayGlobalKey"
+          }, {
+              "attributeType": "S",
+              "attributeName": "AMGlobalKey2"
+          }, {
+              "attributeType": "B",
+              "attributeName": "TayGlobalKey2"
+          }, {
+              "attributeType": "S",
+              "attributeName": "AMGlobalKey3"
+          }, {
+              "attributeType": "S",
+              "attributeName": "TayLocalKey1"
+          }, {
+              "attributeType": "N",
+              "attributeName": "TayLocalKey2"
+          }, {
+              "attributeType": "B",
+              "attributeName": "TayLocalKey3"
+          }],
+          "provisionedThroughput": {
+              "readCapacityUnits": 5,
+              "writeCapacityUnits": 5
+          },
+          "localSecondaryIndexes": [{
+              "indexName": "AMLocal1",
+              "projection": {
+                  "projectionType": "KEYS_ONLY"
+              },
+              "keySchema": [{
+                  "keyType": "HASH",
+                  "attributeName": "AMKey"
+              }, {
+                  "keyType": "RANGE",
+                  "attributeName": "TayLocalKey1"
+              }]
+          }, {
+              "indexName": "AMLocal2",
+              "projection": {
+                  "projectionType": "ALL"
+              },
+              "keySchema": [{
+                  "keyType": "HASH",
+                  "attributeName": "AMKey"
+              }, {
+                  "keyType": "RANGE",
+                  "attributeName": "TayLocalKey2"
+              }]
+          }, {
+              "indexName": "AMLocal3",
+              "projection": {
+                  "nonKeyAttributes": ["Books", "Games"],
+                  "projectionType": "INCLUDE"
+              },
+              "keySchema": [{
+                  "keyType": "HASH",
+                  "attributeName": "AMKey"
+              }, {
+                  "keyType": "RANGE",
+                  "attributeName": "TayLocalKey3"
+              }]
+          }],
+          "globalSecondaryIndexes": [{
+              "provisionedThroughput": {
+                  "readCapacityUnits": 5,
+                  "writeCapacityUnits": 5
+              },
+              "projection": {
+                  "nonKeyAttributes": ["Karaoke", "Sushi"],
+                  "projectionType": "INCLUDE"
+              },
+              "keySchema": [{
+                  "keyType": "HASH",
+                  "attributeName": "AMGlobalKey"
+              }, {
+                  "keyType": "RANGE",
+                  "attributeName": "TayGlobalKey"
+              }],
+              "indexName": "AMGlobal1"
+          }, {
+              "provisionedThroughput": {
+                  "readCapacityUnits": 5,
+                  "writeCapacityUnits": 5
+              },
+              "projection": {
+                  "projectionType": "ALL"
+              },
+              "keySchema": [{
+                  "keyType": "HASH",
+                  "attributeName": "AMGlobalKey2"
+              }, {
+                  "keyType": "RANGE",
+                  "attributeName": "TayGlobalKey2"
+              }],
+              "indexName": "AMGlobal2"
+          }, {
+              "provisionedThroughput": {
+                  "readCapacityUnits": 5,
+                  "writeCapacityUnits": 5
+              },
+              "projection": {
+                  "projectionType": "KEYS_ONLY"
+              },
+              "keySchema": [{
+                  "keyType": "HASH",
+                  "attributeName": "AMGlobalKey3"
+              }],
+              "indexName": "AMGlobal3"
+          }]
+      },
+      "responseElements": {
+          "tableDescription": {
+              "tableId": "83c7b4fe-92b9-48de-9132-4ae4cc9520b5",
+              "attributeDefinitions": [{
+                  "attributeType": "N",
+                  "attributeName": "AMGlobalKey"
+              }, {
+                  "attributeType": "S",
+                  "attributeName": "AMGlobalKey2"
+              }, {
+                  "attributeType": "S",
+                  "attributeName": "AMGlobalKey3"
+              }, {
+                  "attributeType": "S",
+                  "attributeName": "AMKey"
+              }, {
+                  "attributeType": "B",
+                  "attributeName": "TayGlobalKey"
+              }, {
+                  "attributeType": "B",
+                  "attributeName": "TayGlobalKey2"
+              }, {
+                  "attributeType": "B",
+                  "attributeName": "TayKey"
+              }, {
+                  "attributeType": "S",
+                  "attributeName": "TayLocalKey1"
+              }, {
+                  "attributeType": "N",
+                  "attributeName": "TayLocalKey2"
+              }, {
+                  "attributeType": "B",
+                  "attributeName": "TayLocalKey3"
+              }],
+              "provisionedThroughput": {
+                  "readCapacityUnits": 5,
+                  "writeCapacityUnits": 5,
+                  "numberOfDecreasesToday": 0
+              },
+              "tableName": "TestingCodeGenerator",
+              "tableSizeBytes": 0,
+              "tableStatus": "CREATING",
+              "globalSecondaryIndexes": [{
+                  "itemCount": 0,
+                  "indexArn": "arn:aws:dynamodb:us-west-2:812570870442:table/TestingCodeGenerator/index/AMGlobal1",
+                  "indexName": "AMGlobal1",
+                  "projection": {
+                      "nonKeyAttributes": ["Sushi", "Karaoke"],
+                      "projectionType": "INCLUDE"
+                  },
+                  "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5,
+                      "numberOfDecreasesToday": 0
+                  },
+                  "keySchema": [{
+                      "keyType": "HASH",
+                      "attributeName": "AMGlobalKey"
+                  }, {
+                      "keyType": "RANGE",
+                      "attributeName": "TayGlobalKey"
+                  }],
+                  "indexStatus": "CREATING",
+                  "indexSizeBytes": 0
+              }, {
+                  "itemCount": 0,
+                  "indexArn": "arn:aws:dynamodb:us-west-2:812570870442:table/TestingCodeGenerator/index/AMGlobal3",
+                  "indexName": "AMGlobal3",
+                  "projection": {
+                      "projectionType": "KEYS_ONLY"
+                  },
+                  "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5,
+                      "numberOfDecreasesToday": 0
+                  },
+                  "keySchema": [{
+                      "keyType": "HASH",
+                      "attributeName": "AMGlobalKey3"
+                  }],
+                  "indexStatus": "CREATING",
+                  "indexSizeBytes": 0
+              }, {
+                  "itemCount": 0,
+                  "indexArn": "arn:aws:dynamodb:us-west-2:812570870442:table/TestingCodeGenerator/index/AMGlobal2",
+                  "indexName": "AMGlobal2",
+                  "projection": {
+                      "projectionType": "ALL"
+                  },
+                  "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5,
+                      "numberOfDecreasesToday": 0
+                  },
+                  "keySchema": [{
+                      "keyType": "HASH",
+                      "attributeName": "AMGlobalKey2"
+                  }, {
+                      "keyType": "RANGE",
+                      "attributeName": "TayGlobalKey2"
+                  }],
+                  "indexStatus": "CREATING",
+                  "indexSizeBytes": 0
+              }],
+              "keySchema": [{
+                  "keyType": "HASH",
+                  "attributeName": "AMKey"
+              }, {
+                  "keyType": "RANGE",
+                  "attributeName": "TayKey"
+              }],
+              "localSecondaryIndexes": [{
+                  "indexSizeBytes": 0,
+                  "indexArn": "arn:aws:dynamodb:us-west-2:812570870442:table/TestingCodeGenerator/index/AMLocal3",
+                  "keySchema": [{
+                      "keyType": "HASH",
+                      "attributeName": "AMKey"
+                  }, {
+                      "keyType": "RANGE",
+                      "attributeName": "TayLocalKey3"
+                  }],
+                  "itemCount": 0,
+                  "projection": {
+                      "nonKeyAttributes": ["Books", "Games"],
+                      "projectionType": "INCLUDE"
+                  },
+                  "indexName": "AMLocal3"
+              }, {
+                  "indexSizeBytes": 0,
+                  "indexArn": "arn:aws:dynamodb:us-west-2:812570870442:table/TestingCodeGenerator/index/AMLocal2",
+                  "keySchema": [{
+                      "keyType": "HASH",
+                      "attributeName": "AMKey"
+                  }, {
+                      "keyType": "RANGE",
+                      "attributeName": "TayLocalKey2"
+                  }],
+                  "itemCount": 0,
+                  "projection": {
+                      "projectionType": "ALL"
+                  },
+                  "indexName": "AMLocal2"
+              }, {
+                  "indexSizeBytes": 0,
+                  "indexArn": "arn:aws:dynamodb:us-west-2:812570870442:table/TestingCodeGenerator/index/AMLocal1",
+                  "keySchema": [{
+                      "keyType": "HASH",
+                      "attributeName": "AMKey"
+                  }, {
+                      "keyType": "RANGE",
+                      "attributeName": "TayLocalKey1"
+                  }],
+                  "itemCount": 0,
+                  "projection": {
+                      "projectionType": "KEYS_ONLY"
+                  },
+                  "indexName": "AMLocal1"
+              }],
+              "tableArn": "arn:aws:dynamodb:us-west-2:812570870442:table/TestingCodeGenerator",
+              "itemCount": 0,
+              "creationDateTime": "Jun4,20187:07:32PM"
+          }
+      },
+      "requestID": "6MSOE8U2U4TPJG1B0T171O9007VV4KQNSO5AEMVJF66Q9ASUAAJG",
+      "eventID": "ed413c78-147d-4762-aac3-d79bbe33efc3",
+      "eventType": "AwsApiCall",
+      "apiVersion": "2012-08-10"
+  }
+}
