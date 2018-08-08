@@ -65,6 +65,7 @@ namespace GenerateDDBModel.Generator
             code = code.AddUsings(DynamoUsingToken.NormalizeWhitespace());
             var classDeclaration = ClassDeclaration(className)
                 .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
+                .AddModifiers(SyntaxFactory.Token(SyntaxKind.PartialKeyword))
                 .AddAttributeLists(
                     AttributeList(
                         SingletonSeparatedList<AttributeSyntax>(
